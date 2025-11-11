@@ -6,6 +6,7 @@ export const placeOrder = async (orderData) => {
     const response = await fetch(`${API_BASE_URL}/api/razorpay/create-order`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
+      credentials: 'include', // ADD THIS
       body: JSON.stringify(orderData),
     });
 
@@ -26,6 +27,7 @@ export const syncOrderToQikink = async (orderData) => {
     const response = await fetch(`${API_BASE_URL}/api/qikink-sync`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
+      credentials: 'include', // ADD THIS
       body: JSON.stringify(orderData),
     });
 
@@ -49,6 +51,7 @@ export const placeFinalOrder = async (orderData, token) => {
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
       },
+      credentials: 'include', // ADD THIS
       body: JSON.stringify(orderData),
     });
 
@@ -66,7 +69,9 @@ export const placeFinalOrder = async (orderData, token) => {
 // 🧾 Fetch all orders (admin)
 export const fetchOrders = async () => {
   try {
-    const response = await fetch(`${API_BASE_URL}/api/admin/orders`);
+    const response = await fetch(`${API_BASE_URL}/api/admin/orders`, {
+      credentials: 'include' // ADD THIS
+    });
 
     if (!response.ok) {
       throw new Error("Failed to fetch orders");
@@ -82,7 +87,9 @@ export const fetchOrders = async () => {
 // 👤 Fetch orders for a specific user
 export const fetchUserOrders = async (userId) => {
   try {
-    const response = await fetch(`${API_BASE_URL}/api/orders/user/${userId}`);
+    const response = await fetch(`${API_BASE_URL}/api/orders/user/${userId}`, {
+      credentials: 'include' // ADD THIS
+    });
 
     if (!response.ok) {
       throw new Error("Failed to fetch user orders");
