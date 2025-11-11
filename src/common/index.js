@@ -1,4 +1,4 @@
-const backendDomin = https://buyzzar-backend.vercel.app
+const backendDomin = "https://buyzzar-backend.vercel.app"
 
 const SummaryApi = {
     signUP : {
