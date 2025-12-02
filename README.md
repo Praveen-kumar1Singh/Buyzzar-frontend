@@ -1,70 +1,166 @@
-# Getting Started with Create React App
+# 🛒 BUYZZAR – Frontend  
+Modern E-Commerce Frontend built with **React, TailwindCSS, Axios, Razorpay, and Context/Redux**  
+Backend: https://buyzzar-backend.onrender.com  
+Live Frontend: https://buyzzar-frontend-sigma.vercel.app/
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+## 👥 Team Members
 
-In the project directory, you can run:
+| Name | Role |
+|------|------|
+| **Praveen Kumar Singh** | Full Stack Developer |
+| **Abhay Arora** | Frontend Developer |
+| **Sandeep Kumar** | Backend Developer |
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 📌 Project Overview
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Buyzzar is a scalable MERN e-commerce platform offering:
 
-### `npm test`
+- Full authentication via HttpOnly cookies  
+- Razorpay payment integration  
+- Print-On-Demand (POD) integration using Qikink  
+- Responsive UI + smooth UX  
+- Category filter, search, product details  
+- Cart management synced with backend  
+- Order history & profile pages  
+- Admin features (product CRUD, user CRUD)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This repository contains **ONLY the frontend**.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠️ Tech Stack
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **React.js**
+- **React Router DOM**
+- **Tailwind CSS + DaisyUI**
+- **Axios (withCredentials)**
+- **Cloudinary for images**
+- **Razorpay Checkout**
+- **Deployed on Vercel**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 📁 Folder Structure
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+src/
+│── assets/                     # Images & icons
+│── common/
+│     └── index.js              # Summary API routes
+│── helper/
+│     └── api.js                # Axios instance
+│── components/
+│     ├── Header/
+│     ├── ProductCard/
+│     ├── Cart/
+│     ├── Footer/
+│     └── Loading/
+│── pages/
+│     ├── Home/
+│     ├── Login/
+│     ├── Signup/
+│     ├── ProductDetails/
+│     ├── CategoryPage/
+│     ├── Cart/
+│     ├── Checkout/
+│     ├── MyOrders/
+│     └── Admin/
+│── store/                      # Redux Toolkit store (if used)
+│── App.js
+└── index.js
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🛒 Cart Functionality
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+| Feature | Status |
+|--------|--------|
+| Add to cart | ✔️ |
+| Update quantity | ✔️ |
+| Remove from cart | ✔️ |
+| Cart count in header | ✔️ |
+| View cart | ✔️ |
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 💳 Razorpay Checkout
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Flow:
 
-### Code Splitting
+1. Frontend creates order via backend
+2. Razorpay popup opens
+3. Payment verifies via backend
+4. Order is stored & cart cleared
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## ⚙️ Environment Variables
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Create `.env`:
 
-### Making a Progressive Web App
+```
+REACT_APP_API_BASE_URL=https://buyzzar-backend.onrender.com
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 🧪 Local Setup
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```bash
+git clone <repo-url>
+cd buyzzar-frontend
+npm install
+npm start
+```
 
-### Deployment
+App runs at:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```
+http://localhost:3000
+```
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🚀 Deployment (Vercel)
+
+- Build command: `npm run build`
+- Output: `build/`
+- Add this environment variable:
+
+```
+REACT_APP_API_BASE_URL=https://buyzzar-backend.onrender.com
+```
+
+
+
+## 🙌 Contributors
+
+### 👨‍💻 Praveen Kumar Singh  
+Full Stack Developer  
+- MERN Stack  
+- Authentication + Razorpay + Integrations  
+- Deployment + System Design  
+
+### 🎨 Abhay Arora  
+Frontend Developer  
+- UI/UX  
+- React Components  
+- Responsive Design  
+- State Management  
+
+### 🛠️ Sandeep Kumar  
+Backend Developer  
+- Node.js + Express  
+- Database + Auth Middleware  
+- Payments + Order System  
+
+---
+
+## ⭐ Support
+
+If this project helped you, please **star the repository** 🙏  
+More updates & features coming soon!
