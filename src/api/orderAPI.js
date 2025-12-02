@@ -1,4 +1,4 @@
-const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || "https://buyzzar-backend.vercel.app";
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || "https://buyzzar-backend.onrender.com";
 
 // 💳 Create Razorpay order
 export const placeOrder = async (orderData) => {
